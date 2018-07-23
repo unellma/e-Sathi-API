@@ -41,7 +41,7 @@ print_r(json_decode($file));
 ```
 
 ## Get Pages
-  Allow you to retrive the page info
+  Allow you to retrieve the page information
 
 Example of requests:
 ```
@@ -70,7 +70,7 @@ print_r(json_decode($file));
 ```
 
 ## Get Groups
-  Allow you to retrieve the group info
+  Allow you to retrieve the group information
 
 Example of requests:
 ```
