@@ -5,5 +5,8 @@
 
 |Field     |	Description  |	
 | ------------- | ------------- | 
-|get |	This parameter specify the type of the query: users, pages and groups | 
+|get |	This parameter specify the type of the query: users, pages and groups |
+||        - users is for user profile informations|
+||        - pages is for pages informations|
+||        - groups is for groups informations | 
 |query |	The query string |	
