@@ -39,3 +39,60 @@ $file = file_get_contents("https://e-sathi.com/api.php?get=users&query=USERNAME"
 print_r(json_decode($file));
 ?>
 ```
+
+## Get Pages
+  Allow you to retrive the page info
+
+Example of requests:
+```
+[GET] https://e-sathi.com/api.php?get=pages&query=USERNAME
+```
+
+Structure of response:
+[page_id] => 1
+[page_admin] => 1
+[page_category] => 1
+[page_name] => e-Sathi
+[page_title] => e-Sathi
+[page_picture] => https://e-sathi.com/content/themes/default/images/blank_page.png
+[page_cover] =>
+[page_description] => ss
+[page_verified] => 0
+[page_likes] => 0
+
+An example of json decoding would be the following PHP code:
+```
+<?php
+header('Content-Type: text/plain; charset=utf-8;');
+$file = file_get_contents("https://e-sathi.com/api.php?get=pages&query=USERNAME");
+print_r(json_decode($file));
+?>
+```
+
+## Get Groups
+  Allow you to retrieve the group info
+
+Example of requests:
+```
+[GET] https://e-sathi.com/api.php?get=groups&query=USERNAME
+```
+
+Structure of response:
+[group_id] => 1
+[group_admin] => 1
+[group_name] => e-sathi
+[group_title] => e-sathi
+[group_picture] => https://e-sathi.com/content/themes/default/images/blank_page.png
+[group_cover] =>
+[group_description] => ss
+[group_verified] => 0
+[group_members] => 0
+
+An example of json decoding would be the following PHP code:
+```
+<?php
+header('Content-Type: text/plain; charset=utf-8;');
+$file = file_get_contents("https://e-sathi.com/api.php?get=groups&query=USERNAME");
+print_r(json_decode($file));
+?>
+```
