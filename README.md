@@ -37,4 +37,5 @@ An example of json decoding would be the following PHP code:
 header('Content-Type: text/plain; charset=utf-8;');
 $file = file_get_contents("https://e-sathi.com/api.php?get=users&query=USERNAME");
 print_r(json_decode($file));
-?>```
+?>
+```
