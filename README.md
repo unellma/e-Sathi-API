@@ -15,9 +15,11 @@
 Allow you to fetch the user information
 
 Example of requests:
+```
 [GET] https://e-sathi.com/api.php?get=users&query=USERNAME
+```
 
-[{"user_id":"33","user_name":"skk","user_firstname":"Santosh","user_gender":"male","user_picture":"https:\/\/s3.eu-central-1.amazonaws.com\/e-sathi\/uploads\/photos\/2017\/11\/e-sathi_3cbb081b51bda81371e27b1776fcd971.jpg","user_cover":"photos\/2018\/03\/e-sathi_055caaecc3772913e5616531c367f6fc.jpg","user_registered":"2017-11-25 08:59:07","user_verified":"1"}}]
+```[{"user_id":"33","user_name":"skk","user_firstname":"Santosh","user_gender":"male","user_picture":"https:\/\/s3.eu-central-1.amazonaws.com\/e-sathi\/uploads\/photos\/2017\/11\/e-sathi_3cbb081b51bda81371e27b1776fcd971.jpg","user_cover":"photos\/2018\/03\/e-sathi_055caaecc3772913e5616531c367f6fc.jpg","user_registered":"2017-11-25 08:59:07","user_verified":"1"}}]```
 
 Structure of response:
 [user_id] => 1
@@ -28,3 +30,11 @@ Structure of response:
 [user_cover] =>
 [user_registered] => 2017-11-25 08:59:07
 [user_verified] => 1
+
+An example of json decoding would be the following PHP code:
+```
+<?php
+header('Content-Type: text/plain; charset=utf-8;');
+$file = file_get_contents("https://e-sathi.com/api.php?get=users&query=USERNAME");
+print_r(json_decode($file));
+?>```
